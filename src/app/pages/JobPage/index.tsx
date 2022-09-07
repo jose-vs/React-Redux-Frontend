@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { IJob } from '../../../models';
+import { IJob, JobStatusType } from '../../../models';
 import { getJob } from '../../../utils/jobsService';
 import { ReactComponent as ArrowLeft } from '../../assets/arrow-left.svg';
 
@@ -17,6 +17,18 @@ const JobPage = () => {
     navigate('/', { replace: true });
   };
 
+  const dropDownItem = (name: JobStatusType) => {
+    return (
+      <h4
+        onClick={() => {
+          setJob((prev) => ({ ...prev, status: name }));
+        }}
+      >
+        {name}
+      </h4>
+    );
+  };
+
   return (
     <div className="job">
       <div className="job-header">
@@ -27,41 +39,11 @@ const JobPage = () => {
         <div className="dropdown">
           <span className="dropbtn">{job.status}</span>
           <div className="dropdown-content">
-            <h4
-              onClick={() => {
-                setJob((prev) => ({ ...prev, status: 'Active' }));
-              }}
-            >
-              Active
-            </h4>
-            <h4
-              onClick={() => {
-                setJob((prev) => ({ ...prev, status: 'Scheduled' }));
-              }}
-            >
-              Scheduled
-            </h4>
-            <h4
-              onClick={() => {
-                setJob((prev) => ({ ...prev, status: 'Invoicing' }));
-              }}
-            >
-              Invoicing
-            </h4>
-            <h4
-              onClick={() => {
-                setJob((prev) => ({ ...prev, status: 'To Priced' }));
-              }}
-            >
-              To Priced
-            </h4>
-            <h4
-              onClick={() => {
-                setJob((prev) => ({ ...prev, status: 'Completed' }));
-              }}
-            >
-              Completed
-            </h4>
+            {dropDownItem('Active')}
+            {dropDownItem('Scheduled')}
+            {dropDownItem('Invoicing')}
+            {dropDownItem('To Priced')}
+            {dropDownItem('Completed')}
           </div>
         </div>
       </div>
