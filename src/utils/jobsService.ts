@@ -8,9 +8,8 @@ export const getJob = (id: number): IJob => {
 
   const job = jobs.find((obj) => {
     return obj.id === id;
-  });
+  })!;
 
-  if (job) return job;
+  return job;
 
-  throw new Error('job not found');
 };

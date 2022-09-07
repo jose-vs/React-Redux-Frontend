@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, HashRouter as Router } from 'react-router-dom';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 import { NavBar } from './app/components';
@@ -8,17 +8,15 @@ import JobPage from './app/pages/JobPage';
 
 const App = () => {
   return (
-    <Router>
-      <div className="container dark">
-        <div className="app">
-          <NavBar />
-          <Routes>
-            <Route path={process.env.PUBLIC_URL + '/'} element={<HomePage />} />
-            <Route path="/job/:id" element={<JobPage />} />
-          </Routes>
-        </div>
+    <div className="container">
+      <div className="app">
+        <NavBar />
+        <Routes>
+          <Route path={process.env.PUBLIC_URL + '/'} element={<HomePage />} />
+          <Route path="/job/:id" element={<JobPage />} />
+        </Routes>
       </div>
-    </Router>
+    </div>
   );
 };
 

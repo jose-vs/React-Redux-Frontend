@@ -6,17 +6,17 @@ interface ListItemProps {
   job: IJob;
 }
 
-export const ListItem = (props: ListItemProps) => {
-  const { id, status, dateCreated, client } = props.job;
+export const ListItem = ({job}: ListItemProps) => {
+  const { id, status, dateCreated, client } = job;
   return (
     <Link to={`/job/${id}`}>
-      <div className="jobs-list-item">
+      <div data-testid="list-item" className="jobs-list-item">
         <h3>Job No. {id}</h3>
         <h3>
           <span>{client.name}</span> | <span>{status}</span>
         </h3>
         <p>
-          <span>Date Created : {dateCreated}</span>
+          <span>Date Created: {dateCreated}</span>
         </p>
       </div>
     </Link>
