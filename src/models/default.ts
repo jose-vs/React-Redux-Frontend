@@ -23,4 +23,26 @@ export const DEFAULT_JOBS: IJob[] = [
     },
     // note?: string
   },
+  {
+    id: 3,
+    status: 'active',
+    dateCreated: new Date(),
+    client: {
+      name: 'Lydia Deetz',
+      phoneno: 3848301278,
+      email: 'l.Deetz@mail.com',
+    },
+    // note?: string
+  },
+  {
+    id: 4,
+    status: 'active',
+    dateCreated: new Date(),
+    client: {
+      name: 'Alexander Hamilton',
+      phoneno: 38482047348,
+      email: 'a.hamilton@mail.com',
+    },
+    // note?: string
+  },
 ];

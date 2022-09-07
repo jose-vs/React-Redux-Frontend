@@ -1,24 +1,24 @@
 import React from 'react';
 import { Routes, Route, HashRouter as Router } from 'react-router-dom';
+import './App.css'
 
-import './index.module.css';
-import { NavBar } from '../components';
-import HomePage from './HomePage';
-import JobPage from './JobPage';
+import { NavBar } from './app/components';
+import HomePage from './app/pages/HomePage';
+import JobPage from './app/pages/JobPage';
 
 const App = () => {
   return (
-    <Router>
-      <div className="container dark">
-        <div className="app">
+    <div className="container dark">
+      <div className="app">
+        <Router>
           <NavBar />
           <Routes>
             <Route path={process.env.PUBLIC_URL + '/'} element={<HomePage />} />
             <Route path="/job/:id" element={<JobPage />} />
           </Routes>
-        </div>
+        </Router>
       </div>
-    </Router>
+    </div>
   );
 };
 
