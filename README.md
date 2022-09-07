@@ -2,7 +2,11 @@
 
 ## Jose Santos
 
-### This is my application for the Fergus Frontend Technical Test
+This is my application for the Fergus Frontend Technical Test using 
+* React
+* TypeScript 
+* Redux
+* Jest
 
 ![Alt text](assets/homepage.png?raw=true 'Home page')
 
