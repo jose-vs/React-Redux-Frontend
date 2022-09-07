@@ -5,7 +5,7 @@ import { getJob } from '../../../utils/jobsService';
 
 const JobPage = () => {
   const { id } = useParams();
-  const [job, setJob] = useState<IJob>(getJob(parseInt(id ? id : "0")));
+  const [job, setJob] = useState<IJob>(getJob(parseInt(id ? id : '0')));
   const navigate = useNavigate();
 
   return (
@@ -16,7 +16,7 @@ const JobPage = () => {
       </div>
       <textarea
         onChange={(e) => {
-          setJob(prev => ({ ...prev, note: e.target.value}));
+          setJob((prev) => ({ ...prev, note: e.target.value }));
         }}
         defaultValue={job?.note}
       ></textarea>
