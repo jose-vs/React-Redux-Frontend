@@ -1,11 +1,10 @@
 import React from 'react';
 import { Routes, Route, HashRouter as Router } from 'react-router-dom';
 
-import './index.module.css'
+import './index.module.css';
 import { NavBar } from '../components';
 import HomePage from './HomePage';
 import JobPage from './JobPage';
-
 
 const App = () => {
   return (
