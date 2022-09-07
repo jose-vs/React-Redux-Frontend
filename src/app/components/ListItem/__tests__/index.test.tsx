@@ -19,7 +19,7 @@ const mockData: IJob = {
   note: 'test note',
 };
 
-afterEach(cleanup)
+afterEach(cleanup);
 
 // it('renders without crashing', () => {
 //   const div = document.createElement('div');

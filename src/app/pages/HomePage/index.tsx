@@ -30,11 +30,11 @@ const HomePage = () => {
           <span className="dropdown">
             <FaFilter />
             <div className="dropdown-content">
-            {statusdropDownItem('Active')}
-            {statusdropDownItem('Scheduled')}
-            {statusdropDownItem('Invoicing')}
-            {statusdropDownItem('To Price')}
-            {statusdropDownItem('Completed')}
+              {statusdropDownItem('Active')}
+              {statusdropDownItem('Scheduled')}
+              {statusdropDownItem('Invoicing')}
+              {statusdropDownItem('To Price')}
+              {statusdropDownItem('Completed')}
             </div>
           </span>
           <span className="dropdown">

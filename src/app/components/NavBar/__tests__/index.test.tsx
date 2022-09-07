@@ -7,8 +7,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { createRoot } from 'react-dom/client';
 import { act } from 'react-dom/test-utils';
 
-afterEach(cleanup)
-
+afterEach(cleanup);
 
 it('renders Navbar without crashing', () => {
   const div = document.createElement('div');
@@ -17,4 +16,3 @@ it('renders Navbar without crashing', () => {
     root.render(<NavBar />);
   });
 });
-

@@ -8,5 +8,10 @@ import { store } from '../../../../models/root-store/root-store';
 afterEach(cleanup);
 
 it('renders JobPage without crashing', () => {
-  render(<Provider store={store}><JobPage/></Provider>, { wrapper: BrowserRouter });
+  render(
+    <Provider store={store}>
+      <JobPage />
+    </Provider>,
+    { wrapper: BrowserRouter }
+  );
 });

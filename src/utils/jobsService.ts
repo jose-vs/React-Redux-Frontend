@@ -11,5 +11,4 @@ export const getJob = (id: number): IJob => {
   })!;
 
   return job;
-
 };

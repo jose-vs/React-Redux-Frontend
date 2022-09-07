@@ -6,7 +6,7 @@ interface ListItemProps {
   job: IJob;
 }
 
-export const ListItem = ({job}: ListItemProps) => {
+export const ListItem = ({ job }: ListItemProps) => {
   const { id, status, dateCreated, client } = job;
   return (
     <Link to={`/job/${id}`}>
