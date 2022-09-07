@@ -3,18 +3,18 @@ import { IJob } from '.';
 export const DEFAULT_JOBS: IJob[] = [
   {
     id: 1,
-    status: 'active',
+    status: 'Active',
     dateCreated: new Date(),
     client: {
       name: 'Jose Santos',
       phoneno: 3847438357,
       email: 'j.santos@mail.com',
     },
-    // note?: string
+    note: "test note"
   },
   {
     id: 2,
-    status: 'active',
+    status: 'Active',
     dateCreated: new Date(),
     client: {
       name: 'Evan Hansen',
@@ -25,7 +25,7 @@ export const DEFAULT_JOBS: IJob[] = [
   },
   {
     id: 3,
-    status: 'active',
+    status: 'Active',
     dateCreated: new Date(),
     client: {
       name: 'Lydia Deetz',
@@ -36,7 +36,7 @@ export const DEFAULT_JOBS: IJob[] = [
   },
   {
     id: 4,
-    status: 'active',
+    status: 'Active',
     dateCreated: new Date(),
     client: {
       name: 'Alexander Hamilton',

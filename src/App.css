@@ -65,7 +65,6 @@ a {
 .app {
   width: 100%;
   max-width: 720px;
-  height: 88vh;
   margin: 0 auto;
   background-color: var(--color-white);
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
@@ -195,55 +194,143 @@ a {
 
 
 /*==============================
-=>  Note Styles
+=>  Job Styles
 ================================*/
 
-.note-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--color-main);
-  padding: 10px;
+.dropbtn {
+  border: none;
+  outline: none;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--color-white);
+  background-color: var(--color-main) ;
+  text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
+  overflow: hidden;
+  font-size: 18px;
 }
 
-.note-header h3 {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-gray);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content h4 {
+  color: var(--color-white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
   cursor: pointer;
 }
 
-.note-header h3 svg {
+.dropdown-content h4:hover {background-color: var(--color-dark)}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: var(--color-dark);
+  color: var(--color-main)
+}
+
+.job {
+  padding: 30px;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px; 
+  padding-bottom: 15px;
+  color: var(--color-main);
+}
+
+.job-header h3 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  /* cursor: pointer; */
+}
+
+.job-header h3 svg {
   fill: var(--color-main);
   width: 20px;
   margin-right: 8px;
 }
 
-.note-header button {
-  border: none;
-  outline: none;
-  font-weight: 600;
-  background-color: transparent;
-  font-size: 18px;
-  cursor: pointer;
+.job-container { 
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: var(--color-main);
 }
 
-.note textarea {
+.job-container h3 { 
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+
+}
+
+.job textarea {
+  margin: 10px;
+  border: 1;
   background-color: var(--color-white);
-  border: none;
+  border-color: var(--color-main);
   padding: 16px 12px;
   width: 100%;
-  height: 70vh;
+  height: 30vh;
   resize: none;
   scrollbar-width: none; /* Firefox */
 }
 
-.note textarea:active,
-.note textarea:focus {
+.job textarea:active,
+.job textarea:focus {
   outline: none;
-  border: none;
 }
 
-.note textarea::-webkit-scrollbar {
+.job textarea::-webkit-scrollbar {
   display: none;
+}
+
+.job button {
+  border: none;
+  outline: none;
+  font-weight: 600;
+  border-radius: 25px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--color-white);
+  background-color: var(--color-main) ;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  overflow: hidden;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.job button:hover {
+  opacity: 1;
 }

@@ -1,4 +1,4 @@
-export type JobStatusType = 'scheduled' | 'active' | 'invoicing' | 'to priced' | 'completed';
+export type JobStatusType = 'Scheduled' | 'Active' | 'Invoicing' | 'To Priced' | 'Completed';
 
 export interface IClient {
   name: string;

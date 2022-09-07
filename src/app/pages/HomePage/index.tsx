@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { IJob } from '../../../models';
 import { DEFAULT_JOBS } from '../../../models/default';
 import { ListItem } from '../../components';
+
 
 const HomePage: React.FC = () => {
   const [jobs, setJobs] = useState(DEFAULT_JOBS);
