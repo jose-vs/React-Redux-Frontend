@@ -8,17 +8,17 @@ import JobPage from './app/pages/JobPage';
 
 const App = () => {
   return (
-    <div className="container dark">
-      <div className="app">
-        <Router>
+    <Router>
+      <div className="container dark">
+        <div className="app">
           <NavBar />
           <Routes>
             <Route path={process.env.PUBLIC_URL + '/'} element={<HomePage />} />
             <Route path="/job/:id" element={<JobPage />} />
           </Routes>
-        </Router>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

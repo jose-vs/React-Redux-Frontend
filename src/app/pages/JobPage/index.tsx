@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from "react-redux";
 import { useParams, useNavigate } from 'react-router-dom';
 import { IJob, JobStatusType } from '../../../models';
+import { updateJobs } from '../../../models/app-slice/jobSlice';
 import { getJob } from '../../../utils/jobsService';
 import { ReactComponent as ArrowLeft } from '../../assets/arrow-left.svg';
-
-interface JobPageProps {
-  job: IJob;
-}
 
 const JobPage = () => {
   const { id } = useParams();
   const [job, setJob] = useState<IJob>(getJob(parseInt(id ? id : '0')));
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const handleBackClick = () => {
+  const handleButtonClick = () => {
+    dispatch(updateJobs(job))
     navigate('/', { replace: true });
   };
 
@@ -33,7 +33,7 @@ const JobPage = () => {
     <div className="job">
       <div className="job-header">
         <h3>
-          <ArrowLeft onClick={handleBackClick} />
+          <ArrowLeft onClick={handleButtonClick} />
           <span>{job.client.name}</span>
         </h3>
         <div className="dropdown">
@@ -42,7 +42,7 @@ const JobPage = () => {
             {dropDownItem('Active')}
             {dropDownItem('Scheduled')}
             {dropDownItem('Invoicing')}
-            {dropDownItem('To Priced')}
+            {dropDownItem('To Price')}
             {dropDownItem('Completed')}
           </div>
         </div>
@@ -50,7 +50,7 @@ const JobPage = () => {
 
       <div className="job-container">
         <h2>Job No. {job.id}</h2>
-        <h3>Date Created: {job.dateCreated.toISOString().slice(0, 10)}</h3>
+        <h3>Date Created: {job.dateCreated}</h3>
       </div>
       <div className="job-container">
         <h2>Client: {job.client.name}</h2>
@@ -68,7 +68,7 @@ const JobPage = () => {
         defaultValue={job.note}
       ></textarea>
       <div className="job-container">
-        <button>submit</button>
+        <button onClick={handleButtonClick}>submit</button>
       </div>
     </div>
   );

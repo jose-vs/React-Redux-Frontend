@@ -1,4 +1,4 @@
-export type JobStatusType = 'Scheduled' | 'Active' | 'Invoicing' | 'To Priced' | 'Completed';
+export type JobStatusType = 'Scheduled' | 'Active' | 'Invoicing' | 'To Price' | 'Completed';
 
 export interface IClient {
   name: string;
@@ -9,7 +9,7 @@ export interface IClient {
 export interface IJob {
   id: number;
   status: JobStatusType;
-  dateCreated: Date;
+  dateCreated: string;
   client: IClient;
   note?: string;
 }

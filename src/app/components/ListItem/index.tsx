@@ -16,7 +16,7 @@ export const ListItem = (props: ListItemProps) => {
           <span>{client.name}</span> | <span>{status}</span>
         </h3>
         <p>
-          <span>Date Created : {dateCreated.toISOString().slice(0, 10)}</span>
+          <span>Date Created : {dateCreated}</span>
         </p>
       </div>
     </Link>
