@@ -10,7 +10,7 @@ export const DEFAULT_JOBS: IJob[] = [
       phoneno: 3847438357,
       email: 'j.santos@mail.com',
     },
-    note: "test note"
+    note: 'test note',
   },
   {
     id: 2,

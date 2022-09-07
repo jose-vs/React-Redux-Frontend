@@ -4,8 +4,8 @@ import { IJob } from '../../../models';
 import { getJob } from '../../../utils/jobsService';
 import { ReactComponent as ArrowLeft } from '../../assets/arrow-left.svg';
 
-interface JobPageProps { 
-    job: IJob
+interface JobPageProps {
+  job: IJob;
 }
 
 const JobPage = () => {
@@ -13,11 +13,9 @@ const JobPage = () => {
   const [job, setJob] = useState<IJob>(getJob(parseInt(id ? id : '0')));
   const navigate = useNavigate();
 
-
   const handleBackClick = () => {
-    navigate("/", { replace: true });
-  }
-
+    navigate('/', { replace: true });
+  };
 
   return (
     <div className="job">
