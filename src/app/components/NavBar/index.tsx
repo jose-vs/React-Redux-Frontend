@@ -1,8 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export const NavBar: React.FC = () => {
-  return (
-    <div>NavBar</div>
-  )
-}
-
+  return <div>NavBar</div>;
+};
