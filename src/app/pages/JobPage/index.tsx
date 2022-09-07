@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 import { IJob, JobStatusType } from '../../../models';
 import { updateJobs } from '../../../models/app-slice/jobSlice';
@@ -13,7 +13,7 @@ const JobPage = () => {
   const dispatch = useDispatch();
 
   const handleButtonClick = () => {
-    dispatch(updateJobs(job))
+    dispatch(updateJobs(job));
     navigate('/', { replace: true });
   };
 
