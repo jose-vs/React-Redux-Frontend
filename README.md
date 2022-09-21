@@ -1,8 +1,8 @@
-# Fergus Frontend Technical Test
+# React Redux Frontend
 
 ## Jose Santos
 
-This is my application for the Fergus Frontend Technical Test using 
+This is a simple application I made using
 * React
 * TypeScript 
 * Redux
